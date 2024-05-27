@@ -2,6 +2,7 @@
 {
     public class Program
     {
+    // mycomment
         private static Thread[] threads = new Thread[2];
         private static TUI? tui;
 
