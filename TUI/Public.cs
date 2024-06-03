@@ -20,7 +20,7 @@ namespace Program
         {
             Console.Title = $"GuChat_ - Chatting on {this.ipAddr}:{this.port}";
 
-            throw new NotImplementedException();
+            return DrawInputField();
         }
 
         public void Write(string s, bool isError = false, bool isUser = false)
@@ -28,6 +28,8 @@ namespace Program
             if (!isUser) messages.Enqueue(s);
             // The inputstring for users will always be just one character
             else typingBuffer += s[0];
+
+            WriteContents(isUser);
         }
         
         public void Exit()
